@@ -1,0 +1,10 @@
+.movie_poster {
+  box-shadow: 5px 5px 15px -4px #000000;
+  max-width: 24.25rem;
+}
+
+.movie_container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}

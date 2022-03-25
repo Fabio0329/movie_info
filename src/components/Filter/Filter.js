@@ -8,10 +8,10 @@ const genres = ["Action", "Comedy", "Drama", "Fantasy"];
 export const Filter = () => {
   return (
     <Container>
-      <Row>
+      <Row className="m-3">
         {genres.map((genre) => {
           return (
-            <Col>
+            <Col className="text-center">
               <Button>{genre}</Button>
             </Col>
           );

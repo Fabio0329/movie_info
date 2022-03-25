@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Movie } from "../Movie/Movie";
 import { useState, useEffect } from "react";
 import "./MovieList.css";
 
@@ -39,9 +39,9 @@ export const MovieList = () => {
   return (
     <Container fluid>
       <Row>
-        <Col>
-          <h1>Movie List Goes Here</h1>
-        </Col>
+        {movies.map((movie) => {
+          return <Movie movie={movie} imgURL={config} />;
+        })}
       </Row>
     </Container>
   );
