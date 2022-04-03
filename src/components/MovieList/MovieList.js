@@ -1,5 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import { NavBar } from "../NavBar/NavBar";
+import { Filter } from "../Filter/Filter";
 import { Movie } from "../Movie/Movie";
 import { useState, useEffect } from "react";
 import "./MovieList.css";
@@ -37,12 +39,16 @@ export const MovieList = () => {
   }, []);
 
   return (
-    <Container fluid>
-      <Row>
-        {movies.map((movie) => {
-          return <Movie movie={movie} imgURL={config} />;
-        })}
-      </Row>
-    </Container>
+    <>
+      <NavBar />
+      <Filter />
+      <Container fluid>
+        <Row>
+          {movies.map((movie) => {
+            return <Movie movie={movie} imgURL={config} />;
+          })}
+        </Row>
+      </Container>
+    </>
   );
 };

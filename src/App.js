@@ -1,14 +1,16 @@
-import { NavBar } from "./components/NavBar/NavBar";
-import { Filter } from "./components/Filter/Filter";
 import { MovieList } from "./components/MovieList/MovieList";
+import { MovieDetail } from "./components/MovieDetail/MovieDetail";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const App = () => {
   return (
     <>
-      <NavBar />
-      <Filter />
-      <MovieList />
-      {console.log(process.env)}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MovieList />} />
+          <Route path="/movie/:id" element={<MovieDetail />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
