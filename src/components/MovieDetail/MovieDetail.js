@@ -43,10 +43,12 @@ export const MovieDetail = () => {
           />
         </Col>
         <Col xl={6} className="align-middle">
-          <div className="pt-4 ms-2">
+          <div className="pt-4 ms-2 text-white">
             <h1>{movieDetails.title}</h1>
-            <h4>{movieDetails.overview}</h4>
-            <p> {movieDetails.homepage}</p>
+            <h5>{movieDetails.overview}</h5>
+            <a href={movieDetails.homepage} className="fst-italic">
+              {movieDetails.homepage}
+            </a>
           </div>
         </Col>
       </Row>

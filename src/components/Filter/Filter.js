@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
-const genres = ["Action", "Comedy", "Drama", "Fantasy"];
+const genres = ["Action", "Comedy", "Drama", "Fantasy", "Popular"];
 
 export const Filter = () => {
   return (
