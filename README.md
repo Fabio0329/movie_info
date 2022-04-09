@@ -1,5 +1,7 @@
 # Movie Info App
 
+![alt text](https://media.giphy.com/media/xdNa6yt6o8oUJ9SS3F/giphy.gif)
+
 Get a quick look at the latest movies by genre
 
 ## Description
@@ -26,7 +28,7 @@ cd [cloned directory]; npm install
 
 ### Setup
 * Navigate to [TMDB](https://www.themoviedb.org/?language=en-US) to create an account and retrieve your API key
-* In the root directory create a .env file, and update it with your API key in the following line
+* In the root directory create a .env file, and update it with your API key in the following format
 ```
 REACT_APP_MOVIE_API = <API KEY>
 ```
@@ -39,7 +41,7 @@ npm start
 
 ## Authors
 
-Fabio Restrepo
+* Fabio Restrepo
 
 ## Acknowledgments
 
