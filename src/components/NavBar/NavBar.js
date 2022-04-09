@@ -6,7 +6,7 @@ export const NavBar = () => {
   return (
     <Navbar bg="light">
       <Container>
-        <Navbar.Brand>Movie Info</Navbar.Brand>
+        <Navbar.Brand>Movie Info App</Navbar.Brand>
       </Container>
     </Navbar>
   );

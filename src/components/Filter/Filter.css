@@ -1,0 +1,20 @@
+.custom {
+  background: none;
+  color: inherit;
+  border: none;
+  color: whitesmoke;
+}
+
+.custom:hover {
+  background: none;
+  color: inherit;
+  border: none;
+  color: whitesmoke;
+}
+
+.custom:focus {
+  background: none;
+  color: inherit;
+  border: none;
+  color: whitesmoke;
+}

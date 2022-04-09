@@ -6,12 +6,13 @@ import { Movie } from "../Movie/Movie";
 import { useState, useEffect } from "react";
 import "./MovieList.css";
 
-const API_URL = `https://api.themoviedb.org/3/discover/movie?language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&api_key=${process.env.REACT_APP_MOVIE_API}`;
-const CONFIG_URL = `https://api.themoviedb.org/3/configuration?api_key=${process.env.REACT_APP_MOVIE_API}`;
-
 export const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [config, setConfig] = useState({});
+  const [genre, setGenre] = useState("");
+
+  const API_URL = `https://api.themoviedb.org/3/discover/movie?language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&api_key=${process.env.REACT_APP_MOVIE_API}&with_genres=${genre}`;
+  const CONFIG_URL = `https://api.themoviedb.org/3/configuration?api_key=${process.env.REACT_APP_MOVIE_API}`;
 
   const getMovies = async () => {
     try {
@@ -36,16 +37,22 @@ export const MovieList = () => {
   useEffect(() => {
     getMovies();
     getConfig();
-  }, []);
+  }, [genre]);
 
   return (
     <>
       <NavBar />
-      <Filter />
+      <Filter setGenre={setGenre} />
       <Container fluid>
         <Row>
           {movies.map((movie) => {
-            return <Movie movie={movie} imgURL={config} />;
+            return (
+              <Movie
+                movie={movie}
+                imgURL={config}
+                key={movies.indexOf(movie)}
+              />
+            );
           })}
         </Row>
       </Container>
