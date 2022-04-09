@@ -6,15 +6,18 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./MovieDetail.css";
 
+// Constants for api call
 const API_URL = `https://api.themoviedb.org/3/movie/`;
 const BACKDROP_SIZE = "original";
 const POSTER_SIZE = "w500";
 const BASE_IMG_URL = "http://image.tmdb.org/t/p/";
 
+// FC that returns a view of specific movie details
 export const MovieDetail = () => {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
 
+  // API call that stores results in state
   const getMovieDetails = async () => {
     const res = await fetch(
       API_URL + id + "?api_key=" + process.env.REACT_APP_MOVIE_API
