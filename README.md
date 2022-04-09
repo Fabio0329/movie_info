@@ -10,7 +10,7 @@ This application utilizes The Movie DB (TMDB) API to present the latest movies i
 
 ## Built With
 
-* React
+* Create React App
 * React Bootstrap
 * React Router
 * Dotenv
